@@ -4,9 +4,16 @@ const express = require("express");
 const Port = process.env.PORT || 8080; 
 var app = express(); 
 
-app.use(express.urlencoded({ extended: truce}));
-app.use9express.json());
+app.use(express.static("public"));
 
-app.use(express.static("public"))
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
-app.engine("handlebars")
+var exphbs = require("express-handlebars");
+
+app.engine("handbars", exphbs({ defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+
+// will need routes here 
+
+app.use(routes);

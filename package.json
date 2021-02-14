@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/georgettebondarek/burgerHW/issues"
   },
-  "homepage": "https://github.com/georgettebondarek/burgerHW#readme"
+  "homepage": "https://github.com/georgettebondarek/burgerHW#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
