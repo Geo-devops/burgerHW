@@ -1,7 +1,7 @@
 const express = require("express"); 
 
 
-const Port = process.env.PORT || 8080; 
+const Port = process.env.PORT || 3306; 
 var app = express(); 
 
 app.use(express.static("public"));
@@ -11,9 +11,12 @@ app.use(express.json());
 
 var exphbs = require("express-handlebars");
 
-app.engine("handbars", exphbs({ defaultLayout: "main"}));
+app.engine("handbars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// will need routes here 
+var routes = require("./controllers/burger_controller"); 
 
 app.use(routes);
+app.listen(PORT, function() {
+    console.log("Server listening on: http://localhost:" + PORT);
+});

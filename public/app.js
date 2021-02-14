@@ -1,4 +1,4 @@
-$(()) => { 
+$(() => { 
     $(".devour-form").on("submit", function(event){
         event.preventDefault();
 
@@ -9,7 +9,29 @@ $(()) => {
 
         $.ajax({
             method: "PUT",
-            url: 
+            url: "/api/burgers/" + burgerid, 
+            data: {devoured:devoured}
+        }).then(function(data){
+            location.reload()
         })
     })
-}
+    $(".create-form").on("submit", (event) => {
+        event.preventDefault();
+        const newBurger = {
+            name: $("#enter_text").val().trim(), 
+            devoured: 0
+
+        };
+           
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+          }).then(
+            function() {
+              console.log("created new Burger");
+              // Reload the page to get the updated list
+              location.reload();
+            }
+          );
+        });
+      }); 
