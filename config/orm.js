@@ -12,7 +12,7 @@ function printQuestionMarks(num) { //can i make this into an arrow function?
 }
   
 
-function objToSql(ob) { //can i make this into an arrow function?
+function objToSql(ob) { 
     var arr = [];
 
     for (var key in ob) {
@@ -21,8 +21,7 @@ function objToSql(ob) { //can i make this into an arrow function?
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
             value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+        
         arr.push(key + "=" + value);
         }
     }
@@ -31,7 +30,7 @@ function objToSql(ob) { //can i make this into an arrow function?
 
 
 var orm = {
-    //all()
+   
     selectAll: (tableInput, cb) => {
         var queryAll = "select * from " + tableInput + ";";
         connection.query(queryAll, function (err, result) {
@@ -43,7 +42,7 @@ var orm = {
     },
 
 
-    //create()
+   
     insertOne: (table, cols, vals, cb) => {
         var queryAdd = "insert into " + table;
 
@@ -65,7 +64,7 @@ var orm = {
     },
 
 
-    //update()
+   
     updateOne: (table, objColVals, condition, cb) => {
         var queryUpdate = "update " + table;
 
@@ -85,5 +84,5 @@ var orm = {
     }
 };
 
-//export orm
+
 module.exports = orm;
