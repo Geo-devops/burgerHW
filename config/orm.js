@@ -1,8 +1,7 @@
-//import connection
+
 var connection = require("../config/connection.js");
 
-//adding in js from CatsApp activity
-function printQuestionMarks(num) { //can i make this into an arrow function?
+function printQuestionMarks(num) { 
     var arr = [];
 
     for (var i = 0; i < num; i++) {

@@ -132,13 +132,13 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  /* Misc */
+ 
   content: "";
   content: none;
 }
 
 table {
-  /* Visual */
+ 
   border-collapse: collapse;
   border-spacing: 0;
 }

@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    //submit
+  
     $('#submit').on('click', (event) => {
         event.preventDefault();
         console.log('submit:')
@@ -9,19 +9,19 @@ $(document).ready(() => {
             devoured: $("[name=devoured]:checked").val()
         };
 
-        //post
+      
         $.ajax('/api/burgers', {
             type: 'POST',
             data: newBurger
         }).then(
             () => {
                 console.log('created new burger');
-                location.reload(); //reload to update
+                location.reload(); 
             }
         );
     });
 
-    //btnDevour
+    
     $('.btnDevour').on('click', function(event) {
         var id = $(this).data('id');
         var devoured = event.target.getAttribute('data-newDevour');
@@ -29,7 +29,7 @@ $(document).ready(() => {
         console.log(event.target.getAttribute('data-newDevour'));
         
         var newlyDevoured = {
-            devoured: true //not devoured: devoured
+            devoured: true 
         };
 
         $.ajax('/api/burgers/' + id, {
@@ -38,7 +38,7 @@ $(document).ready(() => {
         }).then(
             () => {
                 console.log('changed to devoured', devoured);
-                location.reload(); //reload to update
+                location.reload(); 
             }
         )
     })

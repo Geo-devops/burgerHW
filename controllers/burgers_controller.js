@@ -1,11 +1,11 @@
-//require
+
 var express = require("express");
 var burger = require("../models/burger.js");
 
-//create router
+
 var router = express.Router();
 
-//get
+
 router.get('/', (req, res) => {
     burger.selectAll((data) => {
         var burgersObject = {
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//post
+
 router.post('/api/burgers', (req, res) => {
     burger.insertOne([
         'burger_name'
@@ -27,7 +27,7 @@ router.post('/api/burgers', (req, res) => {
     });
 });
 
-//put
+
 router.put('/api/burgers/:id', (req, res) => {
     console.log(req.body);
     var condition = 'id = ' + req.params.id;
@@ -45,5 +45,5 @@ router.put('/api/burgers/:id', (req, res) => {
     });
 });
 
-//export router
+
 module.exports = router;
