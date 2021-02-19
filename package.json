@@ -1,7 +1,7 @@
 {
-  "name": "burgerhw",
+  "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,18 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgettebondarek/burgerHW.git"
+    "url": "git+https://github.com/ebsizzlin/burger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/georgettebondarek/burgerHW/issues"
+    "url": "https://github.com/ebsizzlin/burger/issues"
   },
-  "homepage": "https://github.com/georgettebondarek/burgerHW#readme",
+  "homepage": "https://github.com/ebsizzlin/burger#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "mysql": "^2.18.1",
-    "require-stack": "^1.0.2"
+    "express-handlebars": "^5.2.1",
+    "mysql": "^2.18.1"
   }
 }
