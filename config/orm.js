@@ -39,7 +39,7 @@ var orm = {
             cb(result);
         });
     },
-
+    
 
    
     insertOne: (table, cols, vals, cb) => {
