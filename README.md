@@ -24,9 +24,7 @@ To run locally:
 
 
 
-## Updated Portfolio Link
 
-https://ebsizzlin.github.io/ResponsivePortfolio/portfolio.html
 
 
 
