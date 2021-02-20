@@ -1,7 +1,7 @@
 body {
   width: 85%;
   background-color: brown;
-  margin: auto;
+    margin: auto;
   font-size: 15px;
 }
 
@@ -37,7 +37,7 @@ h2 {
 li {
   padding: 5px;
   margin: 5px;
-  background: wheat;
+  background: rgb(238, 229, 98);
 }
 
 button {
